@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="MonsterData" format=3]
+
+[ext_resource type="Texture2D" path="res://art/宝可梦图片/goomy.png" id="1_eo01h"]
+[ext_resource type="Script" path="res://custom_resources/monster_move.gd" id="2_xrgpy"]
+[ext_resource type="Script" path="res://custom_resources/monster_data.gd" id="3_4gixj"]
+
+[sub_resource type="Resource" id="Resource_k5roi"]
+script = ExtResource("2_xrgpy")
+move_name = "黏液"
+debuff_id = "exposed"
+debuff_amount = 2
+
+[sub_resource type="Resource" id="Resource_yag4k"]
+script = ExtResource("2_xrgpy")
+move_name = "撞击"
+damage = 4
+
+[sub_resource type="Resource" id="Resource_m5gkm"]
+script = ExtResource("2_xrgpy")
+move_name = "吸收"
+damage = 6
+heal = 3
+
+[sub_resource type="Resource" id="Resource_smig3"]
+script = ExtResource("2_xrgpy")
+move_name = "硬化"
+block = 6
+
+[resource]
+script = ExtResource("3_4gixj")
+id = "goomy"
+display_name = "黏黏宝"
+max_health = 80
+threat_level = 2
+art = ExtResource("1_eo01h")
+drops = Array[String](["purple_mochi"])
+moves = Array[ExtResource("2_xrgpy")]([SubResource("Resource_k5roi"), SubResource("Resource_yag4k"), SubResource("Resource_m5gkm"), SubResource("Resource_smig3")])

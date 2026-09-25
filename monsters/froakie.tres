@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="MonsterData" format=3]
+
+[ext_resource type="Texture2D" path="res://art/宝可梦图片/froakie.png" id="1_mcfao"]
+[ext_resource type="Script" path="res://custom_resources/monster_move.gd" id="2_p6alt"]
+[ext_resource type="Script" path="res://custom_resources/monster_data.gd" id="3_e63i5"]
+
+[sub_resource type="Resource" id="Resource_ypm26"]
+script = ExtResource("2_p6alt")
+move_name = "泡沫"
+damage = 5
+
+[sub_resource type="Resource" id="Resource_a1shr"]
+script = ExtResource("2_p6alt")
+move_name = "影分身"
+block = 5
+buff_id = "muscle"
+buff_amount = 2
+
+[sub_resource type="Resource" id="Resource_a2ag7"]
+script = ExtResource("2_p6alt")
+move_name = "水枪"
+damage = 7
+
+[sub_resource type="Resource" id="Resource_u4lax"]
+script = ExtResource("2_p6alt")
+move_name = "拍击"
+damage = 10
+
+[resource]
+script = ExtResource("3_e63i5")
+id = "froakie"
+display_name = "呱呱泡蛙"
+max_health = 77
+threat_level = 2
+art = ExtResource("1_mcfao")
+drops = Array[String](["frog"])
+moves = Array[ExtResource("2_p6alt")]([SubResource("Resource_ypm26"), SubResource("Resource_a1shr"), SubResource("Resource_a2ag7"), SubResource("Resource_u4lax")])

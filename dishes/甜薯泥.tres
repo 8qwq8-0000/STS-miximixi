@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="DishData" format=3]
+
+[ext_resource type="Texture2D" path="res://art/tile_0111.png" id="1_dhda6"]
+[ext_resource type="Script" path="res://custom_resources/dish_data.gd" id="2_86y5u"]
+
+[resource]
+script = ExtResource("2_86y5u")
+id = "甜薯泥"
+display_name = "甜薯泥"
+level = 2
+art = ExtResource("1_dhda6")
+ingredients = Array[String](["potato", "purple_mochi"])

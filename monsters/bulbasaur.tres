@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="MonsterData" format=3]
+
+[ext_resource type="Texture2D" path="res://art/宝可梦图片/bulbasaur.png" id="1_qwnrt"]
+[ext_resource type="Script" path="res://custom_resources/monster_move.gd" id="2_hn6v2"]
+[ext_resource type="Script" path="res://custom_resources/monster_data.gd" id="3_n524j"]
+
+[sub_resource type="Resource" id="Resource_vvfa0"]
+script = ExtResource("2_hn6v2")
+move_name = "寄生种子"
+debuff_id = "exposed"
+debuff_amount = 2
+
+[sub_resource type="Resource" id="Resource_je46p"]
+script = ExtResource("2_hn6v2")
+move_name = "藤鞭"
+damage = 5
+
+[sub_resource type="Resource" id="Resource_n5mrp"]
+script = ExtResource("2_hn6v2")
+move_name = "光合作用"
+block = 7
+
+[sub_resource type="Resource" id="Resource_76rdn"]
+script = ExtResource("2_hn6v2")
+move_name = "飞叶快刀"
+damage = 7
+
+[resource]
+script = ExtResource("3_n524j")
+id = "bulbasaur"
+display_name = "妙蛙种子"
+max_health = 80
+threat_level = 2
+art = ExtResource("1_qwnrt")
+drops = Array[String](["garlic", "turtle"])
+moves = Array[ExtResource("2_hn6v2")]([SubResource("Resource_vvfa0"), SubResource("Resource_je46p"), SubResource("Resource_n5mrp"), SubResource("Resource_76rdn")])

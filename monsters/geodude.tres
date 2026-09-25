@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="MonsterData" format=3]
+
+[ext_resource type="Texture2D" path="res://art/宝可梦图片/geodude.png" id="1_t5omx"]
+[ext_resource type="Script" path="res://custom_resources/monster_move.gd" id="2_q5til"]
+[ext_resource type="Script" path="res://custom_resources/monster_data.gd" id="3_w2ggs"]
+
+[sub_resource type="Resource" id="Resource_rkjlq"]
+script = ExtResource("2_q5til")
+move_name = "变硬"
+block = 7
+
+[sub_resource type="Resource" id="Resource_0uu7v"]
+script = ExtResource("2_q5til")
+move_name = "撞击"
+damage = 5
+
+[sub_resource type="Resource" id="Resource_y6kk5"]
+script = ExtResource("2_q5til")
+move_name = "岩石封锁"
+damage = 7
+debuff_id = "exposed"
+debuff_amount = 1
+
+[sub_resource type="Resource" id="Resource_8anck"]
+script = ExtResource("2_q5til")
+move_name = "自爆"
+damage = 10
+
+[resource]
+script = ExtResource("3_w2ggs")
+id = "geodude"
+display_name = "小拳石"
+max_health = 76
+threat_level = 2
+art = ExtResource("1_t5omx")
+drops = Array[String](["walnut"])
+moves = Array[ExtResource("2_q5til")]([SubResource("Resource_rkjlq"), SubResource("Resource_0uu7v"), SubResource("Resource_y6kk5"), SubResource("Resource_8anck")])

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="DishData" format=3]
+
+[ext_resource type="Texture2D" path="res://art/tile_0113.png" id="1_de450"]
+[ext_resource type="Script" path="res://custom_resources/dish_data.gd" id="2_cbdmj"]
+
+[resource]
+script = ExtResource("2_cbdmj")
+id = "蘑菇龙肉煲"
+display_name = "蘑菇龙肉煲"
+level = 3
+cost = 1
+art = ExtResource("1_de450")
+ingredients = Array[String](["dragon_meat", "garlic", "mushroom"])
+energy = 2
+random_buffs = 4

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="SwiftStatus" load_steps=3 format=3]
+
+[ext_resource type="Texture2D" path="res://art/状态图标/speedster_power.png" id="1_icon"]
+[ext_resource type="Script" path="res://statuses/swift.gd" id="2_script"]
+
+[resource]
+script = ExtResource("2_script")
+id = "swift"
+type = 0
+stack_type = 1
+stacks = 3
+icon = ExtResource("1_icon")
+tooltip = "迅捷：你的回合开始时额外抽 %s 张牌，然后减少一层。"

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="IngredientData" format=3]
+
+[ext_resource type="Texture2D" path="res://art/掉落物图片/凤凰蛋.png" id="1_bedc2"]
+[ext_resource type="Script" path="res://custom_resources/ingredient_data.gd" id="2_7yt8k"]
+
+[resource]
+script = ExtResource("2_7yt8k")
+id = "phoenix_egg"
+display_name = "凤凰蛋"
+level = 4
+art = ExtResource("1_bedc2")

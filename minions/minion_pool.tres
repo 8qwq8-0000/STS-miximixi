@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="MinionPool" load_steps=8 format=3]
+
+[ext_resource type="Script" path="res://custom_resources/minion_pool.gd" id="1_pool"]
+[ext_resource type="Resource" uid="uid://bbo24od4aavfj" path="res://enemies/bat/bat_enemy.tres" id="2_bat"]
+[ext_resource type="Resource" uid="uid://bnmpwl3k8qb8n" path="res://enemies/crab/crab_enemy.tres" id="3_crab"]
+[ext_resource type="Resource" uid="uid://crmyty52i10xd" path="res://enemies/toxic_ghost/toxic_ghost.tres" id="4_ghost"]
+[ext_resource type="Resource" path="res://minions/cards/minion_bat.tres" id="5_card_bat"]
+[ext_resource type="Resource" path="res://minions/cards/minion_crab.tres" id="6_card_crab"]
+[ext_resource type="Resource" path="res://minions/cards/minion_toxic_ghost.tres" id="7_card_ghost"]
+
+[resource]
+script = ExtResource("1_pool")
+pool = Array[Resource("res://custom_resources/enemy_stats.gd")]([ExtResource("2_bat"), ExtResource("3_crab"), ExtResource("4_ghost")])
+minion_cards = Array[Resource("res://custom_resources/card.gd")]([ExtResource("5_card_bat"), ExtResource("6_card_crab"), ExtResource("7_card_ghost")])
+monster_ids = Array[String](["caterpie", "bounsweet", "bunnelby", "jigglypuff", "mareep", "bagon", "bellsprout", "geodude", "goomy", "corphish", "charmander", "froakie", "slowpoke", "bulbasaur", "chikorita", "dwebble", "exeggcute", "farfetchd", "lickitung", "onix", "butterfree", "parasect", "dugtrio", "dedenne", "miltank", "slowbro", "gengar", "heracross", "machamp"])

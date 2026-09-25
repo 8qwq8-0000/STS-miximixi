@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ExposedStatus" format=3 uid="uid://cxqq0117oxehu"]
+
+[ext_resource type="Texture2D" path="res://art/状态图标/vulnerable_power.png" id="1_242in"]
+[ext_resource type="Script" uid="uid://dpkhuh11lic8f" path="res://statuses/exposed.gd" id="2_d2jjc"]
+
+[resource]
+script = ExtResource("2_d2jjc")
+id = "exposed"
+type = 1
+is_debuff = true
+stack_type = 2
+can_expire = true
+duration = 1
+icon = ExtResource("1_242in")
+tooltip = "破绽：在 %s 回合内受到的伤害增加 50%%。"

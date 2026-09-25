@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://d0efyathkfg74"]
+
+[ext_resource type="Texture2D" uid="uid://1u3b3hwqd8yh" path="res://art/tile_0110.png" id="1_exhc0"]
+[ext_resource type="Script" uid="uid://bhxia3khujhpy" path="res://scenes/enemy/enemy.gd" id="1_ogp3w"]
+[ext_resource type="Texture2D" uid="uid://bb3rcs5nqntir" path="res://art/arrow.png" id="2_x2iwj"]
+[ext_resource type="PackedScene" uid="uid://ph0oi5od64u5" path="res://scenes/ui/stats_ui.tscn" id="3_qiomm"]
+[ext_resource type="PackedScene" uid="uid://b6p08ajglydq8" path="res://scenes/ui/intent_ui.tscn" id="5_xytk4"]
+[ext_resource type="PackedScene" uid="uid://bwet1kdg2v1di" path="res://scenes/status_handler/status_handler.tscn" id="6_3dhyq"]
+[ext_resource type="PackedScene" uid="uid://ctvxie3ni1ik4" path="res://scenes/modifier_handler/modifier_handler.tscn" id="7_xbm7w"]
+[ext_resource type="PackedScene" uid="uid://bqefj5q31b84i" path="res://scenes/modifier_handler/modifier.tscn" id="8_akusk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3gsft"]
+size = Vector2(76.5, 66)
+
+[node name="Enemy" type="Area2D" unique_id=109392354 groups=["enemies"]]
+collision_layer = 4
+script = ExtResource("1_ogp3w")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=397668111]
+position = Vector2(3.0000007, -7.75)
+scale = Vector2(3.75, 3.90625)
+texture = ExtResource("1_exhc0")
+
+[node name="Arrow" type="Sprite2D" parent="." unique_id=1550804766]
+visible = false
+position = Vector2(40, 0)
+rotation = -1.5708
+texture = ExtResource("2_x2iwj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1123505894]
+position = Vector2(1, -9)
+shape = SubResource("RectangleShape2D_3gsft")
+
+[node name="StatsUI" parent="." unique_id=1443871883 instance=ExtResource("3_qiomm")]
+offset_left = -116.0
+offset_top = 31.0
+offset_right = 114.0
+offset_bottom = 72.0
+
+[node name="IntentUI" parent="." unique_id=68882932 groups=["intent"] instance=ExtResource("5_xytk4")]
+offset_left = -46.0
+offset_top = -90.0
+offset_right = 54.0
+offset_bottom = -55.0
+
+[node name="StatusHandler" parent="." unique_id=204178901 node_paths=PackedStringArray("status_owner") instance=ExtResource("6_3dhyq")]
+offset_left = -67.5
+offset_top = 62.5
+offset_right = -67.5
+offset_bottom = 62.5
+status_owner = NodePath("..")
+
+[node name="ModifierHandler" parent="." unique_id=1507460948 instance=ExtResource("7_xbm7w")]
+
+[node name="DamageDealtModifier" parent="ModifierHandler" unique_id=1117210562 instance=ExtResource("8_akusk")]
+
+[node name="DamageTakenModifier" parent="ModifierHandler" unique_id=594920371 instance=ExtResource("8_akusk")]
+type = 1
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]

@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://1c8ggy5aglbb"]
+
+[ext_resource type="Script" uid="uid://cquqfdyjxpp5x" path="res://scenes/cooking_pot/cooking_pot.gd" id="1_pot"]
+[ext_resource type="Texture2D" uid="uid://clb4yoy5tqlva" path="res://art/掉落物图片/铁锅.png" id="2_art"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pot"]
+size = Vector2(49, 52)
+
+[node name="CookingPot" type="Area2D" unique_id=539463680 groups=["cooking_pot"]]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("1_pot")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1799643736]
+position = Vector2(1.000001, 0)
+scale = Vector2(0.6958334, 0.51250005)
+texture = ExtResource("2_art")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=94452125]
+position = Vector2(1, -4)
+shape = SubResource("RectangleShape2D_pot")
+
+[node name="Button" type="Button" parent="." unique_id=567532196]
+offset_left = -57.5
+offset_top = 32.5
+offset_right = 57.5
+offset_bottom = 67.5
+disabled = true
+text = "烹饪"
+
+[node name="Contents" type="Label" parent="." unique_id=1237880969]
+offset_left = -120.0
+offset_top = 70.0
+offset_right = 120.0
+offset_bottom = 92.5
+text = "空锅"
+horizontal_alignment = 1

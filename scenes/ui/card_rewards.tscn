@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://dary1vew8ju42"]
+
+[ext_resource type="Script" uid="uid://drguylavrikvn" path="res://scenes/ui/card_rewards.gd" id="1_okwb6"]
+[ext_resource type="PackedScene" uid="uid://trmdo65td4t7" path="res://scenes/ui/card_menu_ui.tscn" id="1_spfg3"]
+[ext_resource type="PackedScene" uid="uid://c743ur8hoxsn5" path="res://scenes/ui/card_tooltip_popup.tscn" id="2_738we"]
+[ext_resource type="Resource" uid="uid://n3va254ct6b3" path="res://characters/warrior/cards/warrior_slash.tres" id="2_o7v21"]
+[ext_resource type="Script" uid="uid://bg8nmus47b34h" path="res://custom_resources/card.gd" id="2_rssxt"]
+[ext_resource type="Resource" uid="uid://d20gx8xpmgpdi" path="res://characters/warrior/cards/warrior_big_slam.tres" id="3_k78il"]
+[ext_resource type="Resource" uid="uid://c8g8a5tx1sr2p" path="res://characters/warrior/cards/warrior_true_strength.tres" id="4_iwxg7"]
+
+[node name="CardRewards" type="ColorRect" unique_id=809994033]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 8.0
+offset_right = 2.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.666667)
+script = ExtResource("1_okwb6")
+rewards = Array[ExtResource("2_rssxt")]([ExtResource("2_o7v21"), ExtResource("3_k78il"), ExtResource("4_iwxg7")])
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1277256993]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -103.75
+offset_top = -50.0
+offset_right = 103.75
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 25
+
+[node name="Cards" type="HBoxContainer" parent="VBoxContainer" unique_id=607585702]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="CardMenuUI" parent="VBoxContainer/Cards" unique_id=2040367747 instance=ExtResource("1_spfg3")]
+layout_mode = 2
+
+[node name="CardMenuUI2" parent="VBoxContainer/Cards" unique_id=1440176551 instance=ExtResource("1_spfg3")]
+layout_mode = 2
+
+[node name="CardMenuUI3" parent="VBoxContainer/Cards" unique_id=1116710603 instance=ExtResource("1_spfg3")]
+layout_mode = 2
+
+[node name="SkipCardReward" type="Button" parent="VBoxContainer" unique_id=1732535436]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(125, 35)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "跳过"
+
+[node name="woquandouyao" type="Button" parent="VBoxContainer" unique_id=128096862]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(125, 35)
+layout_mode = 2
+size_flags_horizontal = 4
+tooltip_text = "看满 3 秒「广告位招租」，这一轮的卡牌全都要"
+text = "我全都要"
+
+[node name="CardTooltipPopup" parent="." unique_id=1018341676 instance=ExtResource("2_738we")]
+visible = false
+layout_mode = 1
+background_color = Color(0.298039, 0.129412, 0.2, 0.784314)
+
+[node name="TakeButton" type="Button" parent="CardTooltipPopup" unique_id=562244866]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -62.5
+offset_top = -70.0
+offset_right = 62.5
+offset_bottom = -35.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "选择"

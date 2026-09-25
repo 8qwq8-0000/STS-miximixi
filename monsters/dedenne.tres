@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="MonsterData" format=3]
+
+[ext_resource type="Texture2D" path="res://art/宝可梦图片/dedenne.png" id="1_unvko"]
+[ext_resource type="Script" path="res://custom_resources/monster_move.gd" id="2_p4c4y"]
+[ext_resource type="Script" path="res://custom_resources/monster_data.gd" id="3_2qvar"]
+
+[sub_resource type="Resource" id="Resource_b0swj"]
+script = ExtResource("2_p4c4y")
+move_name = "充电"
+block = 7
+buff_id = "muscle"
+buff_amount = 2
+
+[sub_resource type="Resource" id="Resource_8kd1o"]
+script = ExtResource("2_p4c4y")
+move_name = "电击"
+damage = 6
+
+[sub_resource type="Resource" id="Resource_m4ly2"]
+script = ExtResource("2_p4c4y")
+move_name = "蹭蹭脸颊"
+debuff_id = "exposed"
+debuff_amount = 2
+
+[sub_resource type="Resource" id="Resource_4d0mh"]
+script = ExtResource("2_p4c4y")
+move_name = "放电"
+damage = 5
+hits = 2
+
+[resource]
+script = ExtResource("3_2qvar")
+id = "dedenne"
+display_name = "咚咚鼠"
+max_health = 98
+threat_level = 3
+art = ExtResource("1_unvko")
+drops = Array[String](["meat"])
+moves = Array[ExtResource("2_p4c4y")]([SubResource("Resource_b0swj"), SubResource("Resource_8kd1o"), SubResource("Resource_m4ly2"), SubResource("Resource_4d0mh")])

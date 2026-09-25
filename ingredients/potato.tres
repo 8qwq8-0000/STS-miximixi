@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="IngredientData" format=3]
+
+[ext_resource type="Texture2D" path="res://art/掉落物图片/土豆.png" id="1_7cus0"]
+[ext_resource type="Script" path="res://custom_resources/ingredient_data.gd" id="2_adksq"]
+
+[resource]
+script = ExtResource("2_adksq")
+id = "potato"
+display_name = "土豆"
+art = ExtResource("1_7cus0")

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="MinionCard" load_steps=3 format=3]
+
+[ext_resource type="Script" uid="uid://b1men13l4panh" path="res://custom_resources/minion_card.gd" id="1_card"]
+[ext_resource type="Texture2D" uid="uid://d0d4utqf3fuf4" path="res://art/宝可梦图片/charmander.png" id="2_art"]
+
+[resource]
+script = ExtResource("1_card")
+id = "minion_charmander"
+type = 2
+rarity = 2
+target = 0
+cost = 0
+icon = ExtResource("2_art")
+tooltip_text = "[center]召唤 [color=\"ffdf00\"]“小火龙”[/color]\n（2 级威胁）[/center]"
+monster_id = "charmander"

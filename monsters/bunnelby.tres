@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="MonsterData" format=3]
+
+[ext_resource type="Texture2D" path="res://art/宝可梦图片/bunnelby.png" id="1_hmeqi"]
+[ext_resource type="Script" path="res://custom_resources/monster_move.gd" id="2_y8i2w"]
+[ext_resource type="Script" path="res://custom_resources/monster_data.gd" id="3_ueh4d"]
+
+[sub_resource type="Resource" id="Resource_kgxux"]
+script = ExtResource("2_y8i2w")
+move_name = "泥巴射击"
+damage = 3
+debuff_id = "exposed"
+debuff_amount = 1
+
+[sub_resource type="Resource" id="Resource_e6rt7"]
+script = ExtResource("2_y8i2w")
+move_name = "挖洞"
+damage = 4
+
+[sub_resource type="Resource" id="Resource_yuv21"]
+script = ExtResource("2_y8i2w")
+move_name = "掘地"
+block = 4
+
+[sub_resource type="Resource" id="Resource_y782j"]
+script = ExtResource("2_y8i2w")
+move_name = "二连踢"
+damage = 2
+hits = 2
+
+[resource]
+script = ExtResource("3_ueh4d")
+id = "bunnelby"
+display_name = "掘掘兔"
+max_health = 75
+art = ExtResource("1_hmeqi")
+drops = Array[String](["rabbit_meat", "rabbit_head"])
+moves = Array[ExtResource("2_y8i2w")]([SubResource("Resource_kgxux"), SubResource("Resource_e6rt7"), SubResource("Resource_yuv21"), SubResource("Resource_y782j")])

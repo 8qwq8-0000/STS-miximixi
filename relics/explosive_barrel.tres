@@ -1,0 +1,12 @@
+[gd_resource type="Resource" format=3 uid="uid://b11jhsqqh7kfe"]
+
+[ext_resource type="Texture2D" uid="uid://bxa8pkakcodgw" path="res://art/tile_0082.png" id="1_813wr"]
+[ext_resource type="Script" uid="uid://bna12prx63wpq" path="res://relics/explosive_barrel.gd" id="2_snyc5"]
+
+[resource]
+script = ExtResource("2_snyc5")
+relic_name = "炸药桶"
+id = "explosive_barrel"
+icon = ExtResource("1_813wr")
+tooltip = "[color=\"ffdf00\"]炸药桶[/color]
+在你的回合开始时，对所有敌人造成 2 点伤害。"

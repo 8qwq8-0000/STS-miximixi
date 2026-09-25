@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="MonsterData" format=3]
+
+[ext_resource type="Texture2D" path="res://art/宝可梦图片/charmander.png" id="1_klra0"]
+[ext_resource type="Script" path="res://custom_resources/monster_move.gd" id="2_ew50b"]
+[ext_resource type="Resource" path="res://common_cards/burn.tres" id="3_qqdg8"]
+[ext_resource type="Script" path="res://custom_resources/monster_data.gd" id="4_ua4i0"]
+
+[sub_resource type="Resource" id="Resource_sl6o3"]
+script = ExtResource("2_ew50b")
+move_name = "摇尾巴"
+debuff_id = "exposed"
+debuff_amount = 1
+
+[sub_resource type="Resource" id="Resource_6t3o5"]
+script = ExtResource("2_ew50b")
+move_name = "抓"
+damage = 5
+
+[sub_resource type="Resource" id="Resource_ya248"]
+script = ExtResource("2_ew50b")
+move_name = "火花"
+damage = 7
+status_card = ExtResource("3_qqdg8")
+status_card_amount = 1
+
+[sub_resource type="Resource" id="Resource_53opp"]
+script = ExtResource("2_ew50b")
+move_name = "火焰牙"
+damage = 10
+
+[resource]
+script = ExtResource("4_ua4i0")
+id = "charmander"
+display_name = "小火龙"
+max_health = 75
+threat_level = 2
+art = ExtResource("1_klra0")
+drops = Array[String](["dragon_meat", "fire_gland"])
+moves = Array[ExtResource("2_ew50b")]([SubResource("Resource_sl6o3"), SubResource("Resource_6t3o5"), SubResource("Resource_ya248"), SubResource("Resource_53opp")])

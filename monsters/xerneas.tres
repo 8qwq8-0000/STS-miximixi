@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="MonsterData" format=3]
+
+[ext_resource type="Texture2D" path="res://art/宝可梦图片/xerneas.png" id="1_q5bcq"]
+[ext_resource type="Script" path="res://custom_resources/monster_move.gd" id="2_avoyx"]
+[ext_resource type="Script" path="res://custom_resources/monster_data.gd" id="3_ekl3c"]
+
+[sub_resource type="Resource" id="Resource_ohjka"]
+script = ExtResource("2_avoyx")
+move_name = "大地掌控"
+block = 25
+buff_id = "barricade"
+buff_amount = 2
+
+[sub_resource type="Resource" id="Resource_hrdgm"]
+script = ExtResource("2_avoyx")
+move_name = "月亮之力"
+damage = 26
+
+[sub_resource type="Resource" id="Resource_hqvbs"]
+script = ExtResource("2_avoyx")
+move_name = "木角"
+damage = 39
+heal = 15
+
+[sub_resource type="Resource" id="Resource_iwdpc"]
+script = ExtResource("2_avoyx")
+move_name = "妖精之锁"
+damage = 52
+
+[resource]
+script = ExtResource("3_ekl3c")
+id = "xerneas"
+display_name = "哲尔尼亚斯"
+max_health = 290
+threat_level = 4
+rank = 2
+art = ExtResource("1_q5bcq")
+drops = Array[String](["life_sapling"])
+moves = Array[ExtResource("2_avoyx")]([SubResource("Resource_ohjka"), SubResource("Resource_hrdgm"), SubResource("Resource_hqvbs"), SubResource("Resource_iwdpc")])

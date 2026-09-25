@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="MonsterData" format=3]
+
+[ext_resource type="Texture2D" path="res://art/宝可梦图片/ho-oh.png" id="1_2xmg6"]
+[ext_resource type="Script" path="res://custom_resources/monster_move.gd" id="2_iojy1"]
+[ext_resource type="Resource" path="res://common_cards/burn.tres" id="3_pqpi6"]
+[ext_resource type="Script" path="res://custom_resources/monster_data.gd" id="4_p2t2j"]
+
+[sub_resource type="Resource" id="Resource_riohk"]
+script = ExtResource("2_iojy1")
+move_name = "涅槃"
+block = 32
+buff_id = "nirvana"
+buff_amount = 1
+
+[sub_resource type="Resource" id="Resource_hg87d"]
+script = ExtResource("2_iojy1")
+move_name = "神鸟猛击"
+damage = 24
+
+[sub_resource type="Resource" id="Resource_gqmpv"]
+script = ExtResource("2_iojy1")
+move_name = "圣火"
+damage = 36
+status_card = ExtResource("3_pqpi6")
+status_card_amount = 3
+
+[sub_resource type="Resource" id="Resource_ns1jy"]
+script = ExtResource("2_iojy1")
+move_name = "大字爆炎"
+damage = 48
+
+[resource]
+script = ExtResource("4_p2t2j")
+id = "ho-oh"
+display_name = "凤王"
+max_health = 258
+threat_level = 4
+rank = 2
+art = ExtResource("1_2xmg6")
+drops = Array[String](["bird_meat", "phoenix_feather", "phoenix_egg"])
+moves = Array[ExtResource("2_iojy1")]([SubResource("Resource_riohk"), SubResource("Resource_hg87d"), SubResource("Resource_gqmpv"), SubResource("Resource_ns1jy")])

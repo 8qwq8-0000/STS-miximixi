@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="MonsterData" format=3]
+
+[ext_resource type="Texture2D" path="res://art/宝可梦图片/butterfree.png" id="1_55yqy"]
+[ext_resource type="Script" path="res://custom_resources/monster_move.gd" id="2_fibv6"]
+[ext_resource type="Resource" path="res://common_cards/daze.tres" id="3_8x8ha"]
+[ext_resource type="Script" path="res://custom_resources/monster_data.gd" id="4_gk3hn"]
+
+[sub_resource type="Resource" id="Resource_2v5bl"]
+script = ExtResource("2_fibv6")
+move_name = "睡眠粉"
+status_card = ExtResource("3_8x8ha")
+status_card_amount = 2
+
+[sub_resource type="Resource" id="Resource_4m7yn"]
+script = ExtResource("2_fibv6")
+move_name = "念力"
+damage = 6
+
+[sub_resource type="Resource" id="Resource_rpr3d"]
+script = ExtResource("2_fibv6")
+move_name = "麻痹粉"
+debuff_id = "exposed"
+debuff_amount = 2
+
+[sub_resource type="Resource" id="Resource_i52q7"]
+script = ExtResource("2_fibv6")
+move_name = "虫鸣"
+damage = 8
+
+[resource]
+script = ExtResource("4_gk3hn")
+id = "butterfree"
+display_name = "巴大蝶"
+max_health = 92
+threat_level = 2
+art = ExtResource("1_55yqy")
+drops = Array[String](["scale_powder"])
+moves = Array[ExtResource("2_fibv6")]([SubResource("Resource_2v5bl"), SubResource("Resource_4m7yn"), SubResource("Resource_rpr3d"), SubResource("Resource_i52q7")])

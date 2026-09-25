@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="DishData" format=3]
+
+[ext_resource type="Texture2D" path="res://art/tile_0113.png" id="1_usykp"]
+[ext_resource type="Script" path="res://custom_resources/dish_data.gd" id="2_n3otr"]
+
+[resource]
+script = ExtResource("2_n3otr")
+id = "凤凰蛋烧"
+display_name = "凤凰蛋烧"
+level = 3
+cost = 1
+art = ExtResource("1_usykp")
+ingredients = Array[String](["bird_meat", "leek", "phoenix_egg"])
+heal = 20
+guard = 4

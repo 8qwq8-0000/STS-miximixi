@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="MonsterData" format=3]
+
+[ext_resource type="Texture2D" path="res://art/tile_0123.png" id="1_rjclp"]
+[ext_resource type="Script" path="res://custom_resources/monster_move.gd" id="2_1nfav"]
+[ext_resource type="Script" path="res://custom_resources/monster_data.gd" id="3_lh3a7"]
+
+[sub_resource type="Resource" id="Resource_pc566"]
+script = ExtResource("2_1nfav")
+move_name = "待机"
+
+[sub_resource type="Resource" id="Resource_un3vi"]
+script = ExtResource("2_1nfav")
+move_name = "孵化"
+
+[resource]
+script = ExtResource("3_lh3a7")
+id = "ho-ohs-egg"
+display_name = "凤凰蛋"
+threat_level = 4
+encounter_eligible = false
+minion_eligible = false
+art = ExtResource("1_rjclp")
+moves = Array[ExtResource("2_1nfav")]([SubResource("Resource_pc566"), SubResource("Resource_un3vi")])

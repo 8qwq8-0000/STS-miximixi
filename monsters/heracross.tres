@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="MonsterData" format=3]
+
+[ext_resource type="Texture2D" path="res://art/宝可梦图片/heracross.png" id="1_qj6h8"]
+[ext_resource type="Script" path="res://custom_resources/monster_move.gd" id="2_1o4v2"]
+[ext_resource type="Script" path="res://custom_resources/monster_data.gd" id="3_wvar2"]
+
+[sub_resource type="Resource" id="Resource_k0b4w"]
+script = ExtResource("2_1o4v2")
+move_name = "剑舞"
+buff_id = "muscle"
+buff_amount = 3
+
+[sub_resource type="Resource" id="Resource_ymme7"]
+script = ExtResource("2_1o4v2")
+move_name = "角撞"
+damage = 7
+
+[sub_resource type="Resource" id="Resource_3vf6l"]
+script = ExtResource("2_1o4v2")
+move_name = "猛扑"
+damage = 10
+
+[sub_resource type="Resource" id="Resource_isao5"]
+script = ExtResource("2_1o4v2")
+move_name = "超级角击"
+damage = 14
+
+[resource]
+script = ExtResource("3_wvar2")
+id = "heracross"
+display_name = "赫拉克罗斯"
+max_health = 108
+threat_level = 3
+art = ExtResource("1_qj6h8")
+drops = Array[String](["bug_meat", "hard_shell"])
+moves = Array[ExtResource("2_1o4v2")]([SubResource("Resource_k0b4w"), SubResource("Resource_ymme7"), SubResource("Resource_3vf6l"), SubResource("Resource_isao5")])

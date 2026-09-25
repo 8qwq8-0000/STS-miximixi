@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="MonsterData" format=3]
+
+[ext_resource type="Texture2D" path="res://art/宝可梦图片/caterpie.png" id="1_mbuwe"]
+[ext_resource type="Script" path="res://custom_resources/monster_move.gd" id="2_bdyf6"]
+[ext_resource type="Script" path="res://custom_resources/monster_data.gd" id="3_xsrjm"]
+
+[sub_resource type="Resource" id="Resource_xxace"]
+script = ExtResource("2_bdyf6")
+move_name = "吐丝"
+debuff_id = "exposed"
+debuff_amount = 1
+
+[sub_resource type="Resource" id="Resource_37kp0"]
+script = ExtResource("2_bdyf6")
+move_name = "虫咬"
+damage = 2
+
+[sub_resource type="Resource" id="Resource_ok7m6"]
+script = ExtResource("2_bdyf6")
+move_name = "蜷缩"
+block = 3
+
+[sub_resource type="Resource" id="Resource_omo3x"]
+script = ExtResource("2_bdyf6")
+move_name = "撞击"
+damage = 3
+
+[resource]
+script = ExtResource("3_xsrjm")
+id = "caterpie"
+display_name = "绿毛虫"
+max_health = 80
+art = ExtResource("1_mbuwe")
+drops = Array[String](["bug_meat"])
+moves = Array[ExtResource("2_bdyf6")]([SubResource("Resource_xxace"), SubResource("Resource_37kp0"), SubResource("Resource_ok7m6"), SubResource("Resource_omo3x")])

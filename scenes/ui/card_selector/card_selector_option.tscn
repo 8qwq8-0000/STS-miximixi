@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scenes/ui/card_selector/card_selector_option.gd" id="1_option"]
+[ext_resource type="PackedScene" uid="uid://b362c35jf6fmy" path="res://scenes/ui/card_visuals.tscn" id="2_visuals"]
+
+[node name="CardSelectorOption" type="CenterContainer"]
+offset_right = 62.5
+offset_bottom = 75.0
+size_flags_horizontal = 3
+script = ExtResource("1_option")
+
+[node name="Visuals" parent="." instance=ExtResource("2_visuals")]
+layout_mode = 2
+
+[connection signal="gui_input" from="Visuals" to="." method="_on_visuals_gui_input"]

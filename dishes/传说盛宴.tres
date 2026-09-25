@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="DishData" format=3]
+
+[ext_resource type="Texture2D" path="res://art/tile_0116.png" id="1_7rima"]
+[ext_resource type="Script" path="res://custom_resources/dish_data.gd" id="2_viaik"]
+
+[resource]
+script = ExtResource("2_viaik")
+id = "传说盛宴"
+display_name = "传说盛宴"
+level = 4
+cost = 1
+art = ExtResource("1_7rima")
+ingredients = Array[String](["dragon_meat", "fire_gland", "phoenix_egg", "zapdos_egg"])
+max_health = 20
+extra_turn = true
+charged = 2
+metallicize = 5
+miracle = 3

@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="MonsterData" format=3]
+
+[ext_resource type="Texture2D" path="res://art/宝可梦图片/metagross.png" id="1_mnpjf"]
+[ext_resource type="Script" path="res://custom_resources/monster_move.gd" id="2_6pfxh"]
+[ext_resource type="Script" path="res://custom_resources/monster_data.gd" id="3_x8y43"]
+
+[sub_resource type="Resource" id="Resource_h7kp6"]
+script = ExtResource("2_6pfxh")
+move_name = "铁壁"
+block = 29
+buff_id = "muscle"
+buff_amount = 3
+
+[sub_resource type="Resource" id="Resource_3nc6y"]
+script = ExtResource("2_6pfxh")
+move_name = "子弹拳"
+damage = 12
+hits = 3
+
+[sub_resource type="Resource" id="Resource_0k5dw"]
+script = ExtResource("2_6pfxh")
+move_name = "彗星拳"
+damage = 35
+
+[sub_resource type="Resource" id="Resource_46l03"]
+script = ExtResource("2_6pfxh")
+move_name = "意念头槌"
+damage = 46
+
+[resource]
+script = ExtResource("3_x8y43")
+id = "metagross"
+display_name = "巨金怪"
+max_health = 216
+threat_level = 4
+rank = 1
+art = ExtResource("1_mnpjf")
+drops = Array[String](["iron_pot"])
+moves = Array[ExtResource("2_6pfxh")]([SubResource("Resource_h7kp6"), SubResource("Resource_3nc6y"), SubResource("Resource_0k5dw"), SubResource("Resource_46l03")])

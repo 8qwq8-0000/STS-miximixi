@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="DishData" format=3]
+
+[ext_resource type="Texture2D" path="res://art/tile_0111.png" id="1_ffeis"]
+[ext_resource type="Script" path="res://custom_resources/dish_data.gd" id="2_m3fvg"]
+
+[resource]
+script = ExtResource("2_m3fvg")
+id = "蘑菇蟹肉煲"
+display_name = "蘑菇蟹肉煲"
+level = 2
+art = ExtResource("1_ffeis")
+ingredients = Array[String](["crab", "mushroom"])
+muscle_min = 2
+muscle_max = 5

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="MinionCard" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://custom_resources/minion_card.gd" id="1_card"]
+[ext_resource type="Resource" uid="uid://crmyty52i10xd" path="res://enemies/toxic_ghost/toxic_ghost.tres" id="2_stats"]
+[ext_resource type="Texture2D" uid="uid://c24y6l0ivlqp7" path="res://art/tile_0108.png" id="3_art"]
+
+[resource]
+script = ExtResource("1_card")
+id = "minion_toxic_ghost"
+type = 2
+rarity = 2
+target = 0
+cost = 0
+icon = ExtResource("3_art")
+tooltip_text = "[center]召唤 [color=\"ffdf00\"]“毒幽灵”[/color][/center]"
+minion_stats = ExtResource("2_stats")

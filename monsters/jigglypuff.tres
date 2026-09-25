@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="MonsterData" format=3]
+
+[ext_resource type="Texture2D" path="res://art/宝可梦图片/jigglypuff.png" id="1_4pqkj"]
+[ext_resource type="Script" path="res://custom_resources/monster_move.gd" id="2_m2jl8"]
+[ext_resource type="Script" path="res://custom_resources/monster_data.gd" id="3_klhdh"]
+
+[sub_resource type="Resource" id="Resource_i0x5f"]
+script = ExtResource("2_m2jl8")
+move_name = "唱歌"
+debuff_id = "exposed"
+debuff_amount = 2
+
+[sub_resource type="Resource" id="Resource_waarh"]
+script = ExtResource("2_m2jl8")
+move_name = "拍击"
+damage = 4
+
+[sub_resource type="Resource" id="Resource_dg43i"]
+script = ExtResource("2_m2jl8")
+move_name = "膨胀"
+block = 3
+buff_id = "muscle"
+buff_amount = 2
+
+[sub_resource type="Resource" id="Resource_y4cwb"]
+script = ExtResource("2_m2jl8")
+move_name = "连环巴掌"
+damage = 2
+hits = 3
+
+[resource]
+script = ExtResource("3_klhdh")
+id = "jigglypuff"
+display_name = "胖丁"
+max_health = 136
+art = ExtResource("1_4pqkj")
+drops = Array[String](["cotton_candy"])
+moves = Array[ExtResource("2_m2jl8")]([SubResource("Resource_i0x5f"), SubResource("Resource_waarh"), SubResource("Resource_dg43i"), SubResource("Resource_y4cwb")])

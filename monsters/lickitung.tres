@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="MonsterData" format=3]
+
+[ext_resource type="Texture2D" path="res://art/宝可梦图片/lickitung.png" id="1_e8tre"]
+[ext_resource type="Script" path="res://custom_resources/monster_move.gd" id="2_0imrl"]
+[ext_resource type="Script" path="res://custom_resources/monster_data.gd" id="3_ta2gx"]
+
+[sub_resource type="Resource" id="Resource_wog6e"]
+script = ExtResource("2_0imrl")
+move_name = "舌舔"
+damage = 5
+debuff_id = "exposed"
+debuff_amount = 1
+
+[sub_resource type="Resource" id="Resource_rr5sc"]
+script = ExtResource("2_0imrl")
+move_name = "卷紧"
+block = 9
+
+[sub_resource type="Resource" id="Resource_hq137"]
+script = ExtResource("2_0imrl")
+move_name = "缠绕"
+debuff_id = "exposed"
+debuff_amount = 2
+
+[sub_resource type="Resource" id="Resource_80nlp"]
+script = ExtResource("2_0imrl")
+move_name = "泰山压顶"
+damage = 7
+
+[resource]
+script = ExtResource("3_ta2gx")
+id = "lickitung"
+display_name = "大舌头"
+max_health = 116
+threat_level = 2
+art = ExtResource("1_e8tre")
+drops = Array[String](["meat", "tongue"])
+moves = Array[ExtResource("2_0imrl")]([SubResource("Resource_wog6e"), SubResource("Resource_rr5sc"), SubResource("Resource_hq137"), SubResource("Resource_80nlp")])

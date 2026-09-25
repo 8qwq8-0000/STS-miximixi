@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="MonsterData" format=3]
+
+[ext_resource type="Texture2D" path="res://art/宝可梦图片/yveltal.png" id="1_pf1co"]
+[ext_resource type="Script" path="res://custom_resources/monster_move.gd" id="2_oj2ma"]
+[ext_resource type="Resource" path="res://common_cards/dread.tres" id="3_vokvn"]
+[ext_resource type="Script" path="res://custom_resources/monster_data.gd" id="4_swirh"]
+
+[sub_resource type="Resource" id="Resource_yvcpy"]
+script = ExtResource("2_oj2ma")
+move_name = "暗黑气场"
+buff_id = "muscle"
+buff_amount = 4
+
+[sub_resource type="Resource" id="Resource_4o5hp"]
+script = ExtResource("2_oj2ma")
+move_name = "恶之波动"
+damage = 26
+debuff_id = "exposed"
+debuff_amount = 1
+
+[sub_resource type="Resource" id="Resource_l7crw"]
+script = ExtResource("2_oj2ma")
+move_name = "死亡之翼"
+damage = 39
+heal = 15
+
+[sub_resource type="Resource" id="Resource_xf1uv"]
+script = ExtResource("2_oj2ma")
+move_name = "死亡诅咒"
+damage = 52
+status_card = ExtResource("3_vokvn")
+status_card_amount = 2
+
+[resource]
+script = ExtResource("4_swirh")
+id = "yveltal"
+display_name = "伊裴尔塔尔"
+max_health = 290
+threat_level = 4
+rank = 2
+art = ExtResource("1_pf1co")
+drops = Array[String](["ruin_feather"])
+moves = Array[ExtResource("2_oj2ma")]([SubResource("Resource_yvcpy"), SubResource("Resource_4o5hp"), SubResource("Resource_l7crw"), SubResource("Resource_xf1uv")])

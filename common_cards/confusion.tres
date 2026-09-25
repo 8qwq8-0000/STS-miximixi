@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="StatusCard" load_steps=3 format=3]
+
+[ext_resource type="Texture2D" path="res://art/状态图标/confused_power.png" id="1_icon"]
+[ext_resource type="Script" path="res://custom_resources/status_card.gd" id="2_script"]
+
+[resource]
+script = ExtResource("2_script")
+id = "confusion"
+type = 3
+cost = 0
+icon = ExtResource("1_icon")
+tooltip_text = "[center][color=\"ff0000\"]混乱[/color]：不可打出。你的回合结束时，将 1 张「灼烧」洗入抽牌堆。[/center]"
+end_of_turn_add_burn = 1

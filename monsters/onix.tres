@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="MonsterData" format=3]
+
+[ext_resource type="Texture2D" path="res://art/宝可梦图片/onix.png" id="1_1xltn"]
+[ext_resource type="Script" path="res://custom_resources/monster_move.gd" id="2_46ag2"]
+[ext_resource type="Script" path="res://custom_resources/monster_data.gd" id="3_m3fuv"]
+
+[sub_resource type="Resource" id="Resource_6kfwt"]
+script = ExtResource("2_46ag2")
+move_name = "坚硬"
+block = 11
+
+[sub_resource type="Resource" id="Resource_voox6"]
+script = ExtResource("2_46ag2")
+move_name = "绑紧"
+damage = 3
+
+[sub_resource type="Resource" id="Resource_iph38"]
+script = ExtResource("2_46ag2")
+move_name = "铁尾"
+damage = 5
+
+[sub_resource type="Resource" id="Resource_l1e6e"]
+script = ExtResource("2_46ag2")
+move_name = "落石"
+damage = 7
+
+[resource]
+script = ExtResource("3_m3fuv")
+id = "onix"
+display_name = "大岩蛇"
+max_health = 72
+threat_level = 2
+art = ExtResource("1_1xltn")
+drops = Array[String](["candied_fruit"])
+moves = Array[ExtResource("2_46ag2")]([SubResource("Resource_6kfwt"), SubResource("Resource_voox6"), SubResource("Resource_iph38"), SubResource("Resource_l1e6e")])

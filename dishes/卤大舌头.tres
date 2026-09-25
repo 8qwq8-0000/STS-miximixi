@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="DishData" format=3]
+
+[ext_resource type="Texture2D" path="res://art/tile_0111.png" id="1_34hnm"]
+[ext_resource type="Script" path="res://custom_resources/dish_data.gd" id="2_tb6i5"]
+
+[resource]
+script = ExtResource("2_tb6i5")
+id = "卤大舌头"
+display_name = "卤大舌头"
+level = 2
+art = ExtResource("1_34hnm")
+ingredients = Array[String](["garlic", "leek", "tongue"])
+retain = 3

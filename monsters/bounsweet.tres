@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="MonsterData" format=3]
+
+[ext_resource type="Texture2D" path="res://art/宝可梦图片/bounsweet.png" id="1_wknls"]
+[ext_resource type="Script" path="res://custom_resources/monster_move.gd" id="2_pcn1o"]
+[ext_resource type="Script" path="res://custom_resources/monster_data.gd" id="3_v2lnn"]
+
+[sub_resource type="Resource" id="Resource_upojc"]
+script = ExtResource("2_pcn1o")
+move_name = "香甜气息"
+buff_id = "muscle"
+buff_amount = 2
+
+[sub_resource type="Resource" id="Resource_wypqs"]
+script = ExtResource("2_pcn1o")
+move_name = "撞击"
+damage = 3
+
+[sub_resource type="Resource" id="Resource_tf0sc"]
+script = ExtResource("2_pcn1o")
+move_name = "光合作用"
+block = 4
+
+[sub_resource type="Resource" id="Resource_s0v4b"]
+script = ExtResource("2_pcn1o")
+move_name = "飞叶快刀"
+damage = 4
+
+[resource]
+script = ExtResource("3_v2lnn")
+id = "bounsweet"
+display_name = "甜竹竹"
+max_health = 78
+art = ExtResource("1_wknls")
+drops = Array[String](["mangosteen"])
+moves = Array[ExtResource("2_pcn1o")]([SubResource("Resource_upojc"), SubResource("Resource_wypqs"), SubResource("Resource_tf0sc"), SubResource("Resource_s0v4b")])

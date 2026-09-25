@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://cuwuwco4sf0y6"]
+
+[ext_resource type="Script" uid="uid://cgl0qapirjgcw" path="res://scenes/map/map.gd" id="1_l06hy"]
+[ext_resource type="Script" uid="uid://si8eyxb2gulk" path="res://scenes/map/map_generator.gd" id="2_0qmb6"]
+[ext_resource type="Resource" uid="uid://by8ka073e8sah" path="res://battles/battle_stats_pool.tres" id="3_cadnm"]
+[ext_resource type="Resource" uid="uid://bncylsfojpqyu" path="res://scenes/event_rooms/event_room_pool.tres" id="4_0q2ee"]
+[ext_resource type="Texture2D" uid="uid://dtavghvsrdoek" path="res://art/map_top_underdocks.png" id="5_04w0f"]
+[ext_resource type="Texture2D" uid="uid://d28ebhpnrxhgp" path="res://art/map_middle_underdocks.png" id="5_fcby6"]
+[ext_resource type="Texture2D" uid="uid://bnc3mv4c0et2m" path="res://art/map_bottom_underdocks.png" id="7_sqgf4"]
+
+[node name="Map" type="Node2D" unique_id=289879644]
+script = ExtResource("1_l06hy")
+
+[node name="Visuals" type="Node2D" parent="." unique_id=644885759]
+
+[node name="Lines" type="Node2D" parent="Visuals" unique_id=781330128]
+unique_name_in_owner = true
+
+[node name="Rooms" type="Node2D" parent="Visuals" unique_id=1747846027]
+unique_name_in_owner = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=325409051]
+offset = Vector2(320, 180)
+
+[node name="MapGenerator" type="Node" parent="." unique_id=1133364427]
+script = ExtResource("2_0qmb6")
+battle_stats_pool = ExtResource("3_cadnm")
+event_room_pool = ExtResource("4_0q2ee")
+
+[node name="MapBackground" type="CanvasLayer" parent="." unique_id=1574643537]
+layer = -1
+follow_viewport_enabled = true
+
+[node name="TopBackground" type="TextureRect" parent="MapBackground" unique_id=644640658]
+offset_left = -119.0
+offset_top = -824.0
+offset_right = 707.0
+offset_bottom = -338.0
+mouse_filter = 2
+texture = ExtResource("5_04w0f")
+expand_mode = 1
+
+[node name="MiddleBackground" type="TextureRect" parent="MapBackground" unique_id=1332372]
+offset_left = -113.0
+offset_top = -431.0
+offset_right = 712.0
+offset_bottom = 66.0
+mouse_filter = 2
+texture = ExtResource("5_fcby6")
+expand_mode = 1
+
+[node name="BottomBackground" type="TextureRect" parent="MapBackground" unique_id=686644021]
+offset_left = -119.0
+offset_top = -33.0
+offset_right = 717.0
+offset_bottom = 402.0
+mouse_filter = 2
+texture = ExtResource("7_sqgf4")
+expand_mode = 1

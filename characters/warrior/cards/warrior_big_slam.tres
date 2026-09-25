@@ -1,0 +1,16 @@
+[gd_resource type="Resource" format=3 uid="uid://d20gx8xpmgpdi"]
+
+[ext_resource type="Texture2D" uid="uid://44jbm5bqr4k" path="res://art/tile_0117.png" id="1_11nym"]
+[ext_resource type="Script" uid="uid://ceja2u7a7dre4" path="res://characters/warrior/cards/warrior_big_slam.gd" id="2_hh2ps"]
+[ext_resource type="AudioStream" uid="uid://dixklg6g4jnsq" path="res://art/slash.ogg" id="3_0l7j0"]
+
+[resource]
+script = ExtResource("2_hh2ps")
+id = "warrior_big_slam"
+rarity = 1
+target = 1
+cost = 1
+exhausts = true
+icon = ExtResource("1_11nym")
+tooltip_text = "[center]造成 [color=\"ff0000\"]%s[/color] 点伤害并施加 2 层[color=\"ffdf00\"]破绽[/color].[/center]"
+sound = ExtResource("3_0l7j0")

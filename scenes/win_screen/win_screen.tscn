@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://cg6eqhe0t3dv2"]
+
+[ext_resource type="Script" uid="uid://cddk4fiefhgcs" path="res://scenes/win_screen/win_screen.gd" id="1_n40vj"]
+[ext_resource type="Texture2D" uid="uid://cpydvk8mq66o5" path="res://art/tile_0087.png" id="3_13ibh"]
+
+[sub_resource type="Gradient" id="Gradient_7af3e"]
+colors = PackedColorArray(0.2, 0.117647, 0.0509804, 1, 0.054902, 0, 0.0588235, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_1kxac"]
+gradient = SubResource("Gradient_7af3e")
+width = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_aveil"]
+line_spacing = 15.0
+font_size = 24
+shadow_size = 10
+shadow_color = Color(0.54902, 0.443137, 0.376471, 0.333333)
+
+[node name="WinScreen" type="Control" unique_id=902455831]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_n40vj")
+
+[node name="Background" type="TextureRect" parent="." unique_id=731646039]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_1kxac")
+
+[node name="CharacterPortrait" type="TextureRect" parent="." unique_id=1944479284]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -217.5
+offset_top = -75.0
+offset_right = -67.5
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_13ibh")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="VboxContainer" type="VBoxContainer" parent="." unique_id=775686803]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 7.5
+offset_top = -80.0
+offset_right = 242.5
+offset_bottom = 80.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+
+[node name="Message" type="Label" parent="VboxContainer" unique_id=1438518231]
+unique_name_in_owner = true
+layout_mode = 2
+text = "「好像完成的还不错？」「这还是我第一次自爆呢」
+
+「也就是说……」
+
+「没错 是玩家赢了」"
+label_settings = SubResource("LabelSettings_aveil")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MainMenuButton" type="Button" parent="VboxContainer" unique_id=1657685874]
+custom_minimum_size = Vector2(150, 35)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "主菜单"
+
+[connection signal="pressed" from="VboxContainer/MainMenuButton" to="." method="_on_main_menu_button_pressed"]

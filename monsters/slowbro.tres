@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="MonsterData" format=3]
+
+[ext_resource type="Texture2D" path="res://art/宝可梦图片/slowbro.png" id="1_u68bd"]
+[ext_resource type="Script" path="res://custom_resources/monster_move.gd" id="2_3qbxq"]
+[ext_resource type="Script" path="res://custom_resources/monster_data.gd" id="3_ys027"]
+
+[sub_resource type="Resource" id="Resource_sns1k"]
+script = ExtResource("2_3qbxq")
+move_name = "缩壳"
+block = 11
+
+[sub_resource type="Resource" id="Resource_6jm42"]
+script = ExtResource("2_3qbxq")
+move_name = "水枪"
+damage = 7
+
+[sub_resource type="Resource" id="Resource_w2her"]
+script = ExtResource("2_3qbxq")
+move_name = "意念头槌"
+damage = 11
+
+[sub_resource type="Resource" id="Resource_o3c5d"]
+script = ExtResource("2_3qbxq")
+move_name = "泰山压顶"
+damage = 15
+
+[resource]
+script = ExtResource("3_ys027")
+id = "slowbro"
+display_name = "呆壳兽"
+max_health = 120
+threat_level = 3
+art = ExtResource("1_u68bd")
+drops = Array[String](["meat", "scallop"])
+moves = Array[ExtResource("2_3qbxq")]([SubResource("Resource_sns1k"), SubResource("Resource_6jm42"), SubResource("Resource_w2her"), SubResource("Resource_o3c5d")])

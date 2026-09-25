@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="MonsterData" format=3]
+
+[ext_resource type="Texture2D" path="res://art/宝可梦图片/dugtrio.png" id="1_5c84f"]
+[ext_resource type="Script" path="res://custom_resources/monster_move.gd" id="2_loewg"]
+[ext_resource type="Script" path="res://custom_resources/monster_data.gd" id="3_bn0wy"]
+
+[sub_resource type="Resource" id="Resource_8hsgv"]
+script = ExtResource("2_loewg")
+move_name = "沙暴"
+debuff_id = "exposed"
+debuff_amount = 2
+
+[sub_resource type="Resource" id="Resource_goewy"]
+script = ExtResource("2_loewg")
+move_name = "三重攻击"
+damage = 3
+hits = 3
+
+[sub_resource type="Resource" id="Resource_kelof"]
+script = ExtResource("2_loewg")
+move_name = "挖洞"
+damage = 6
+
+[sub_resource type="Resource" id="Resource_3p6mh"]
+script = ExtResource("2_loewg")
+move_name = "地震"
+damage = 13
+
+[resource]
+script = ExtResource("3_bn0wy")
+id = "dugtrio"
+display_name = "三地鼠"
+max_health = 72
+threat_level = 3
+art = ExtResource("1_5c84f")
+drops = Array[String](["potato", "red_bean"])
+moves = Array[ExtResource("2_loewg")]([SubResource("Resource_8hsgv"), SubResource("Resource_goewy"), SubResource("Resource_kelof"), SubResource("Resource_3p6mh")])

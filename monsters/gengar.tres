@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="MonsterData" format=3]
+
+[ext_resource type="Texture2D" path="res://art/宝可梦图片/gengar.png" id="1_5lq7w"]
+[ext_resource type="Script" path="res://custom_resources/monster_move.gd" id="2_0apmj"]
+[ext_resource type="Resource" path="res://common_cards/dread.tres" id="3_uiksn"]
+[ext_resource type="Script" path="res://custom_resources/monster_data.gd" id="4_7yxnh"]
+
+[sub_resource type="Resource" id="Resource_mk834"]
+script = ExtResource("2_0apmj")
+move_name = "催眠术"
+status_card = ExtResource("3_uiksn")
+status_card_amount = 2
+
+[sub_resource type="Resource" id="Resource_w56tn"]
+script = ExtResource("2_0apmj")
+move_name = "舌舔"
+damage = 8
+debuff_id = "exposed"
+debuff_amount = 1
+
+[sub_resource type="Resource" id="Resource_qbq3b"]
+script = ExtResource("2_0apmj")
+move_name = "暗影球"
+damage = 12
+
+[sub_resource type="Resource" id="Resource_24soi"]
+script = ExtResource("2_0apmj")
+move_name = "食梦"
+damage = 17
+
+[resource]
+script = ExtResource("4_7yxnh")
+id = "gengar"
+display_name = "耿鬼"
+max_health = 92
+threat_level = 3
+art = ExtResource("1_5lq7w")
+drops = Array[String](["strange_matter"])
+moves = Array[ExtResource("2_0apmj")]([SubResource("Resource_mk834"), SubResource("Resource_w56tn"), SubResource("Resource_qbq3b"), SubResource("Resource_24soi")])

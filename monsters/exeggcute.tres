@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="MonsterData" format=3]
+
+[ext_resource type="Texture2D" path="res://art/宝可梦图片/exeggcute.png" id="1_1xt2h"]
+[ext_resource type="Script" path="res://custom_resources/monster_move.gd" id="2_k1lud"]
+[ext_resource type="Resource" path="res://common_cards/confusion.tres" id="3_qjw80"]
+[ext_resource type="Script" path="res://custom_resources/monster_data.gd" id="4_xtsp5"]
+
+[sub_resource type="Resource" id="Resource_dcygg"]
+script = ExtResource("2_k1lud")
+move_name = "念力"
+damage = 4
+status_card = ExtResource("3_qjw80")
+status_card_amount = 1
+
+[sub_resource type="Resource" id="Resource_31jvj"]
+script = ExtResource("2_k1lud")
+move_name = "种子炸弹"
+damage = 6
+
+[sub_resource type="Resource" id="Resource_fsno5"]
+script = ExtResource("2_k1lud")
+move_name = "蛋壳"
+block = 7
+buff_id = "muscle"
+buff_amount = 2
+
+[sub_resource type="Resource" id="Resource_6dptl"]
+script = ExtResource("2_k1lud")
+move_name = "催眠术"
+debuff_id = "exposed"
+debuff_amount = 2
+
+[resource]
+script = ExtResource("4_xtsp5")
+id = "exeggcute"
+display_name = "蛋蛋"
+max_health = 92
+threat_level = 2
+art = ExtResource("1_1xt2h")
+drops = Array[String](["egg"])
+moves = Array[ExtResource("2_k1lud")]([SubResource("Resource_dcygg"), SubResource("Resource_31jvj"), SubResource("Resource_fsno5"), SubResource("Resource_6dptl")])

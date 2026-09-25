@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="MonsterData" format=3]
+
+[ext_resource type="Texture2D" path="res://art/宝可梦图片/parasect.png" id="1_vj3kq"]
+[ext_resource type="Script" path="res://custom_resources/monster_move.gd" id="2_3jidb"]
+[ext_resource type="Script" path="res://custom_resources/monster_data.gd" id="3_dla32"]
+
+[sub_resource type="Resource" id="Resource_65478"]
+script = ExtResource("2_3jidb")
+move_name = "蘑菇孢子"
+debuff_id = "exposed"
+debuff_amount = 2
+
+[sub_resource type="Resource" id="Resource_bkb6s"]
+script = ExtResource("2_3jidb")
+move_name = "连斩"
+damage = 5
+hits = 2
+
+[sub_resource type="Resource" id="Resource_sjcsh"]
+script = ExtResource("2_3jidb")
+move_name = "吸收"
+damage = 6
+heal = 4
+
+[sub_resource type="Resource" id="Resource_iqg4l"]
+script = ExtResource("2_3jidb")
+move_name = "致命一击"
+damage = 13
+
+[resource]
+script = ExtResource("3_dla32")
+id = "parasect"
+display_name = "派拉斯特"
+max_health = 92
+threat_level = 2
+art = ExtResource("1_vj3kq")
+drops = Array[String](["bug_meat", "mushroom"])
+moves = Array[ExtResource("2_3jidb")]([SubResource("Resource_65478"), SubResource("Resource_bkb6s"), SubResource("Resource_sjcsh"), SubResource("Resource_iqg4l")])

@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="MonsterData" format=3]
+
+[ext_resource type="Texture2D" path="res://art/宝可梦图片/slowpoke.png" id="1_joguu"]
+[ext_resource type="Script" path="res://custom_resources/monster_move.gd" id="2_fgfy1"]
+[ext_resource type="Script" path="res://custom_resources/monster_data.gd" id="3_08nxj"]
+
+[sub_resource type="Resource" id="Resource_wkka0"]
+script = ExtResource("2_fgfy1")
+move_name = "撞击"
+damage = 4
+
+[sub_resource type="Resource" id="Resource_x76lg"]
+script = ExtResource("2_fgfy1")
+move_name = "哈欠"
+debuff_id = "exposed"
+debuff_amount = 2
+
+[sub_resource type="Resource" id="Resource_45tpk"]
+script = ExtResource("2_fgfy1")
+move_name = "偷懒"
+block = 6
+heal = 4
+
+[sub_resource type="Resource" id="Resource_t5hrn"]
+script = ExtResource("2_fgfy1")
+move_name = "意念头槌"
+damage = 6
+
+[resource]
+script = ExtResource("3_08nxj")
+id = "slowpoke"
+display_name = "呆呆兽"
+max_health = 116
+threat_level = 2
+art = ExtResource("1_joguu")
+drops = Array[String](["big_tail", "meat"])
+moves = Array[ExtResource("2_fgfy1")]([SubResource("Resource_wkka0"), SubResource("Resource_x76lg"), SubResource("Resource_45tpk"), SubResource("Resource_t5hrn")])

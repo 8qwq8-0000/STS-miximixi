@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://2n4lap6w3pde"]
+
+[ext_resource type="Texture2D" uid="uid://cpydvk8mq66o5" path="res://art/tile_0087.png" id="1_0r2oj"]
+[ext_resource type="Script" uid="uid://b73aagtstb028" path="res://scenes/player/player.gd" id="1_il1gs"]
+[ext_resource type="PackedScene" uid="uid://ph0oi5od64u5" path="res://scenes/ui/stats_ui.tscn" id="2_wnqqm"]
+[ext_resource type="PackedScene" uid="uid://bwet1kdg2v1di" path="res://scenes/status_handler/status_handler.tscn" id="4_60v6k"]
+[ext_resource type="PackedScene" uid="uid://ctvxie3ni1ik4" path="res://scenes/modifier_handler/modifier_handler.tscn" id="5_v2emp"]
+[ext_resource type="PackedScene" uid="uid://bqefj5q31b84i" path="res://scenes/modifier_handler/modifier.tscn" id="6_jup6q"]
+[ext_resource type="Script" uid="uid://d0fg7alrlc6p6" path="res://scenes/player/player_target_area.gd" id="7_target"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_player_target"]
+size = Vector2(60, 60)
+
+[node name="Player" type="Node2D" unique_id=586531310 groups=["player"]]
+script = ExtResource("1_il1gs")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1927551569]
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_0r2oj")
+
+[node name="PlayerTargetArea" type="Area2D" parent="." unique_id=1961132484 node_paths=PackedStringArray("target_node")]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("7_target")
+target_node = NodePath("..")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerTargetArea" unique_id=1760160071]
+shape = SubResource("RectangleShape2D_player_target")
+
+[node name="StatsUI" parent="." unique_id=1400627915 instance=ExtResource("2_wnqqm")]
+offset_top = 15.0
+offset_bottom = 55.0
+
+[node name="StatusHandler" parent="." unique_id=740584794 node_paths=PackedStringArray("status_owner") instance=ExtResource("4_60v6k")]
+offset_left = -60.0
+offset_top = 60.0
+offset_right = -60.0
+offset_bottom = 60.0
+status_owner = NodePath("..")
+
+[node name="ModifierHandler" parent="." unique_id=1540880757 instance=ExtResource("5_v2emp")]
+
+[node name="DamageDealtModifier" parent="ModifierHandler" unique_id=1608205086 instance=ExtResource("6_jup6q")]
+
+[node name="DamageTakenModifier" parent="ModifierHandler" unique_id=1173049339 instance=ExtResource("6_jup6q")]
+type = 1
+
+[node name="CardCostModifier" parent="ModifierHandler" unique_id=1119716742 instance=ExtResource("6_jup6q")]
+type = 2

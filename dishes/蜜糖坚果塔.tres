@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="DishData" format=3]
+
+[ext_resource type="Texture2D" path="res://art/tile_0111.png" id="1_153cv"]
+[ext_resource type="Script" path="res://custom_resources/dish_data.gd" id="2_c5gkv"]
+
+[resource]
+script = ExtResource("2_c5gkv")
+id = "蜜糖坚果塔"
+display_name = "蜜糖坚果塔"
+level = 2
+art = ExtResource("1_153cv")
+ingredients = Array[String](["cotton_candy", "mangosteen", "milk", "walnut"])
+uses = 3
+block = 10

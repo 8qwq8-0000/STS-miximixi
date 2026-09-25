@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="IngredientData" format=3]
+
+[ext_resource type="Texture2D" path="res://art/掉落物图片/大尾巴.png" id="1_pe7qi"]
+[ext_resource type="Script" path="res://custom_resources/ingredient_data.gd" id="2_frvfg"]
+
+[resource]
+script = ExtResource("2_frvfg")
+id = "big_tail"
+display_name = "大尾巴"
+level = 2
+art = ExtResource("1_pe7qi")

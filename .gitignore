@@ -1,0 +1,26 @@
+# Godot 4+ specific ignores
+.godot/
+
+# Godot-specific ignores
+.import/
+export.cfg
+export_presets.cfg
+
+# Imported translations (automatically generated from CSV files)
+*.translation
+
+# Mono-specific ignores
+.mono/
+data_*/
+
+# Local-only bitmap font library (hundreds of MB of third-party fonts).
+# Keep it on disk so the game can load it; just don't put it in history.
+字体/
+
+# Stray files that landed in the project folder; they are not part of the game.
+~$*
+pokemon名单_含种族值.xlsx
+尖塔饭.zip
+
+# Scratch folder for one-off probes (BGM loop checks and the like).
+_cn_tools/

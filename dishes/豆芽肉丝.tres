@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="DishData" format=3]
+
+[ext_resource type="Texture2D" path="res://art/tile_0109.png" id="1_pau0x"]
+[ext_resource type="Script" path="res://custom_resources/dish_data.gd" id="2_d5e4a"]
+
+[resource]
+script = ExtResource("2_d5e4a")
+id = "豆芽肉丝"
+display_name = "豆芽肉丝"
+art = ExtResource("1_pau0x")
+ingredients = Array[String](["bean_sprout", "meat"])
+muscle = 2

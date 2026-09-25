@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DishData" format=3]
+
+[ext_resource type="Texture2D" path="res://art/tile_0109.png" id="1_lwv7m"]
+[ext_resource type="Script" path="res://custom_resources/dish_data.gd" id="2_faj77"]
+
+[resource]
+script = ExtResource("2_faj77")
+id = "土豆炖肉"
+display_name = "土豆炖肉"
+art = ExtResource("1_lwv7m")
+ingredients = Array[String](["meat", "potato"])

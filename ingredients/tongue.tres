@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="IngredientData" format=3]
+
+[ext_resource type="Texture2D" path="res://art/掉落物图片/大舌头.png" id="1_vsvmv"]
+[ext_resource type="Script" path="res://custom_resources/ingredient_data.gd" id="2_0pcvi"]
+
+[resource]
+script = ExtResource("2_0pcvi")
+id = "tongue"
+display_name = "大舌头"
+level = 2
+art = ExtResource("1_vsvmv")

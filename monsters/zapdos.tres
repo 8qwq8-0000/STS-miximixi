@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="MonsterData" format=3]
+
+[ext_resource type="Texture2D" path="res://art/宝可梦图片/zapdos.png" id="1_k1pw7"]
+[ext_resource type="Script" path="res://custom_resources/monster_move.gd" id="2_rerwh"]
+[ext_resource type="Resource" path="res://common_cards/daze.tres" id="3_6n3wg"]
+[ext_resource type="Script" path="res://custom_resources/monster_data.gd" id="4_r1ea8"]
+
+[sub_resource type="Resource" id="Resource_vtim6"]
+script = ExtResource("2_rerwh")
+move_name = "充电"
+block = 23
+buff_id = "muscle"
+buff_amount = 3
+
+[sub_resource type="Resource" id="Resource_klbnk"]
+script = ExtResource("2_rerwh")
+move_name = "电光一闪"
+damage = 21
+
+[sub_resource type="Resource" id="Resource_pgule"]
+script = ExtResource("2_rerwh")
+move_name = "十万伏特"
+damage = 32
+
+[sub_resource type="Resource" id="Resource_v1bnw"]
+script = ExtResource("2_rerwh")
+move_name = "打雷"
+damage = 43
+status_card = ExtResource("3_6n3wg")
+status_card_amount = 2
+
+[resource]
+script = ExtResource("4_r1ea8")
+id = "zapdos"
+display_name = "闪电鸟"
+max_health = 232
+threat_level = 4
+rank = 1
+art = ExtResource("1_k1pw7")
+drops = Array[String](["bird_meat", "lightning_feather", "zapdos_egg"])
+moves = Array[ExtResource("2_rerwh")]([SubResource("Resource_vtim6"), SubResource("Resource_klbnk"), SubResource("Resource_pgule"), SubResource("Resource_v1bnw")])

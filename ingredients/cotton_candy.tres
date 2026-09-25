@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="IngredientData" format=3]
+
+[ext_resource type="Texture2D" path="res://art/掉落物图片/棉花糖.png" id="1_qmdwi"]
+[ext_resource type="Script" path="res://custom_resources/ingredient_data.gd" id="2_s7h44"]
+
+[resource]
+script = ExtResource("2_s7h44")
+id = "cotton_candy"
+display_name = "棉花糖"
+art = ExtResource("1_qmdwi")

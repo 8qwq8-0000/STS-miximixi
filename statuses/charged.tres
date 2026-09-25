@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="DecayingStatus" load_steps=3 format=3]
+
+[ext_resource type="Texture2D" path="res://art/状态图标/high_voltage_power.png" id="1_icon"]
+[ext_resource type="Script" path="res://custom_resources/decaying_status.gd" id="2_script"]
+
+[resource]
+script = ExtResource("2_script")
+id = "charged"
+type = 0
+stack_type = 1
+stacks = 2
+icon = ExtResource("1_icon")
+tooltip = "带电：你每打出一张牌，对随机一个敌人造成 8 点伤害。剩余 %s 层。"

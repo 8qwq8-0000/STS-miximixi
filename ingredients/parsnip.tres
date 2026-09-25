@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="IngredientData" format=3]
+
+[ext_resource type="Texture2D" path="res://art/掉落物图片/防风草.png" id="1_5d5k3"]
+[ext_resource type="Script" path="res://custom_resources/ingredient_data.gd" id="2_0roto"]
+
+[resource]
+script = ExtResource("2_0roto")
+id = "parsnip"
+display_name = "防风草"
+level = 2
+art = ExtResource("1_5d5k3")

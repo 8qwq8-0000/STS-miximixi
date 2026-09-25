@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="NirvanaStatus" load_steps=3 format=3]
+
+[ext_resource type="Texture2D" path="res://art/状态图标/spirit_of_ash_power.png" id="1_icon"]
+[ext_resource type="Script" path="res://statuses/nirvana.gd" id="2_script"]
+
+[resource]
+script = ExtResource("2_script")
+id = "nirvana"
+type = 2
+stack_type = 1
+stacks = 1
+icon = ExtResource("1_icon")
+tooltip = "涅槃：死亡后立即满血复活，同时失去一层。剩余 %s 层。"

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="DishData" format=3]
+
+[ext_resource type="Texture2D" path="res://art/tile_0111.png" id="1_elcf3"]
+[ext_resource type="Script" path="res://custom_resources/dish_data.gd" id="2_2ce2b"]
+
+[resource]
+script = ExtResource("2_2ce2b")
+id = "鸭肉卷"
+display_name = "鸭肉卷"
+level = 2
+art = ExtResource("1_elcf3")
+ingredients = Array[String](["duck_meat", "leaf", "leek"])
+draw = 2

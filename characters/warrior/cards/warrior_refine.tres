@@ -1,0 +1,13 @@
+[gd_resource type="Resource" format=3 uid="uid://cajwn3nsx1xjj"]
+
+[ext_resource type="Texture2D" uid="uid://dl3a87y1bxtt8" path="res://art/tile_0096.png" id="1_icon"]
+[ext_resource type="Script" uid="uid://6phahueba44k" path="res://characters/warrior/cards/warrior_refine.gd" id="2_script"]
+[ext_resource type="AudioStream" uid="uid://df64e7qat73gs" path="res://art/block.ogg" id="3_sound"]
+
+[resource]
+script = ExtResource("2_script")
+id = "warrior_refine"
+type = 1
+icon = ExtResource("1_icon")
+tooltip_text = "[center]消耗 1 张牌，抽一张牌获得 [color=\"0044ff\"]%s[/color] 点格挡。[/center]"
+sound = ExtResource("3_sound")

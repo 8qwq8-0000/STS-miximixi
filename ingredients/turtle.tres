@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="IngredientData" format=3]
+
+[ext_resource type="Texture2D" path="res://art/掉落物图片/甲鱼.png" id="1_0veai"]
+[ext_resource type="Script" path="res://custom_resources/ingredient_data.gd" id="2_wy68f"]
+
+[resource]
+script = ExtResource("2_wy68f")
+id = "turtle"
+display_name = "甲鱼"
+level = 2
+art = ExtResource("1_0veai")

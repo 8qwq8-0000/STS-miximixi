@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="PowerCard" load_steps=4 format=3]
+
+[ext_resource type="Texture2D" path="res://art/状态图标/guarded_power.png" id="1_icon"]
+[ext_resource type="Script" path="res://custom_resources/power_card.gd" id="2_script"]
+[ext_resource type="Resource" path="res://statuses/guard.tres" id="3_power"]
+
+[resource]
+script = ExtResource("2_script")
+id = "power_guard"
+type = 2
+rarity = 2
+target = 0
+cost = 1
+icon = ExtResource("1_icon")
+tooltip_text = "[center][color=\"ffcc00\"]能力[/color]：你受到攻击时失去一层，以免疫该次伤害。获得 2 层。[/center]"
+power = ExtResource("3_power")

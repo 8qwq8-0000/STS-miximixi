@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="PurifyStatus" load_steps=3 format=3]
+
+[ext_resource type="Texture2D" path="res://art/状态图标/artifact_power.png" id="1_icon"]
+[ext_resource type="Script" path="res://statuses/purify.gd" id="2_script"]
+
+[resource]
+script = ExtResource("2_script")
+id = "purify"
+type = 0
+stack_type = 1
+stacks = 2
+icon = ExtResource("1_icon")
+tooltip = "净化：获得负面效果时，抵消相应层数的负面效果，并失去一层。剩余 %s 层。"

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="DishData" format=3]
+
+[ext_resource type="Texture2D" path="res://art/tile_0116.png" id="1_ogjvq"]
+[ext_resource type="Script" path="res://custom_resources/dish_data.gd" id="2_xbiy7"]
+
+[resource]
+script = ExtResource("2_xbiy7")
+id = "圣兽大餐"
+display_name = "圣兽大餐"
+level = 4
+cost = 1
+art = ExtResource("1_ogjvq")
+ingredients = Array[String](["big_tail", "bird_meat", "leek", "phoenix_egg"])
+nirvana = 1

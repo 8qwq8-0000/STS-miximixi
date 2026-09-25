@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="MonsterData" format=3]
+
+[ext_resource type="Texture2D" path="res://art/宝可梦图片/zygarde-50.png" id="1_lcdww"]
+[ext_resource type="Script" path="res://custom_resources/monster_move.gd" id="2_iep6k"]
+[ext_resource type="Script" path="res://custom_resources/monster_data.gd" id="3_8njda"]
+
+[sub_resource type="Resource" id="Resource_fs1wo"]
+script = ExtResource("2_iep6k")
+move_name = "盘蜷"
+block = 28
+buff_id = "muscle"
+buff_amount = 3
+
+[sub_resource type="Resource" id="Resource_7wild"]
+script = ExtResource("2_iep6k")
+move_name = "大地神力"
+damage = 18
+
+[sub_resource type="Resource" id="Resource_ud3k6"]
+script = ExtResource("2_iep6k")
+move_name = "千箭齐发"
+damage = 9
+hits = 3
+
+[sub_resource type="Resource" id="Resource_n8ret"]
+script = ExtResource("2_iep6k")
+move_name = "核心惩罚者"
+damage = 36
+
+[resource]
+script = ExtResource("3_8njda")
+id = "zygarde-50"
+display_name = "基格尔德"
+max_health = 261
+threat_level = 4
+rank = 2
+art = ExtResource("1_lcdww")
+drops = Array[String](["order_core"])
+moves = Array[ExtResource("2_iep6k")]([SubResource("Resource_fs1wo"), SubResource("Resource_7wild"), SubResource("Resource_ud3k6"), SubResource("Resource_n8ret")])

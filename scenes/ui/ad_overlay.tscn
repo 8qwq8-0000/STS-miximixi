@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://dy1gsnhuyhknp"]
+
+[ext_resource type="Script" uid="uid://dl25gs5chdryn" path="res://scenes/ui/ad_overlay.gd" id="1_bmlii"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gja7r"]
+bg_color = Color(0.09, 0.075, 0.07, 0.98)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.85, 0.72, 0.32, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="AdOverlay" type="Control" unique_id=2106556181]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1_bmlii")
+
+[node name="Dimmer" type="ColorRect" parent="." unique_id=8814059]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.03, 0.025, 0.03, 0.92)
+
+[node name="Center" type="CenterContainer" parent="." unique_id=684213772]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="AdBox" type="PanelContainer" parent="Center" unique_id=1578755386]
+custom_minimum_size = Vector2(520, 250)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_gja7r")
+
+[node name="Padding" type="MarginContainer" parent="Center/AdBox" unique_id=1646953795]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Column" type="VBoxContainer" parent="Center/AdBox/Padding" unique_id=1584184811]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="AdTag" type="Label" parent="Center/AdBox/Padding/Column" unique_id=1546740033]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.85, 0.72, 0.32, 1)
+theme_override_font_sizes/font_size = 14
+text = "广告"
+horizontal_alignment = 1
+
+[node name="AdTitle" type="Label" parent="Center/AdBox/Padding/Column" unique_id=1053287336]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "广告位招租"
+horizontal_alignment = 1
+
+[node name="AdSubtitle" type="Label" parent="Center/AdBox/Padding/Column" unique_id=527717103]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.63, 0.55, 0.48, 1)
+theme_override_font_sizes/font_size = 12
+text = "本广告位长期招租 · 招商热线 400-000-0000"
+horizontal_alignment = 1
+
+[node name="Spacer" type="Control" parent="Center/AdBox/Padding/Column" unique_id=1080896989]
+custom_minimum_size = Vector2(0, 8)
+layout_mode = 2
+
+[node name="AdCountdown" type="Label" parent="Center/AdBox/Padding/Column" unique_id=347379510]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.94, 0.9, 0.82, 1)
+theme_override_font_sizes/font_size = 16
+text = "3 秒后自动发放全部奖励"
+horizontal_alignment = 1
+
+[node name="AdSkipButton" type="Button" parent="Center/AdBox/Padding/Column" unique_id=1643264954]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 12
+disabled = true
+text = "跳过广告（3）"

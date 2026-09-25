@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="MonsterData" format=3]
+
+[ext_resource type="Texture2D" path="res://art/宝可梦图片/dwebble.png" id="1_kti6r"]
+[ext_resource type="Script" path="res://custom_resources/monster_move.gd" id="2_8x01p"]
+[ext_resource type="Script" path="res://custom_resources/monster_data.gd" id="3_fequ8"]
+
+[sub_resource type="Resource" id="Resource_q4whg"]
+script = ExtResource("2_8x01p")
+move_name = "缩壳"
+block = 7
+buff_id = "muscle"
+buff_amount = 2
+
+[sub_resource type="Resource" id="Resource_hxt4g"]
+script = ExtResource("2_8x01p")
+move_name = "夹击"
+damage = 4
+
+[sub_resource type="Resource" id="Resource_4620g"]
+script = ExtResource("2_8x01p")
+move_name = "岩崩"
+damage = 6
+
+[sub_resource type="Resource" id="Resource_p7dcr"]
+script = ExtResource("2_8x01p")
+move_name = "岩石爆击"
+damage = 2
+hits = 3
+
+[resource]
+script = ExtResource("3_fequ8")
+id = "dwebble"
+display_name = "石居蟹"
+max_health = 84
+threat_level = 2
+art = ExtResource("1_kti6r")
+drops = Array[String](["crab", "hard_shell"])
+moves = Array[ExtResource("2_8x01p")]([SubResource("Resource_q4whg"), SubResource("Resource_hxt4g"), SubResource("Resource_4620g"), SubResource("Resource_p7dcr")])
